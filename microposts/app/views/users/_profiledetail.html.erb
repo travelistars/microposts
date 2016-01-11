@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+        <%= form_for(@user) do |f| %>
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="user_name">
+                    <%= f.label :name %>:
+                </label>
+                <div class="col-sm-9">
+                    <%= f.text_field :name, :class => 'form-control'%>
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="user_nickname">
+                    <%= f.label :nickname %>:
+                </label>
+                <div class="col-sm-9">
+                    <%= f.text_field :nickname, :class => 'form-control' %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="user_gender">
+                    <%= f.label :gender %>:
+                </label>
+                <div class="col-sm-9 radio">
+                    <label><%= f.radio_button :gender, 1, :class => 'radio'%>男</label>
+                    <label><%= f.radio_button :gender, 2, :class => 'radio'%>女</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="user_birthday">
+                    <%= f.label :birthday %>:
+                </label>
+                <div class="col-sm-9">                    
+                    <%= f.date_select :birthday,
+                    start_year: 1940, end_year: Time.now.year,
+                    use_month_numbers: true, :class => 'bootstrap-date' %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="user_email">
+                    <%= f.label :email %>:
+                </label>
+                <div class="col-sm-9">                    
+                    <%= f.text_field :email, :class => 'form-control' %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="user_description">
+                    <%= f.label :description %>:
+                </label>
+                <div class="col-sm-9">                    
+                    <%= f.text_area :description, :class => 'form-control' %>
+                </div>
+            </div>            
+            
+ 
+            <%= f.submit "ユーザー情報を保存する", class: "btn btn-large btn-primary" %>
+ 
+        <% end %>
+    </div>   
+</div>
+
