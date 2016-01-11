@@ -1,3 +1,4 @@
+I18n.locale = "ja"
 class SessionsController < ApplicationController
   def new
   end

@@ -1,9 +1,13 @@
 ja:
   activerecord:
     models:
-      users: ユーザー
+      user: ユーザー
     attributes:
-      users:
+      user:
         name: 名前
         email: メールアドレス
         password: パスワード
+        nickname: ニックネーム
+        content: 内容
+        description: 自己紹介
+        gender: 性別

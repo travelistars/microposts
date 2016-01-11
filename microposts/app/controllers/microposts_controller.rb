@@ -1,3 +1,4 @@
+I18n.locale = "ja"
 class MicropostsController < ApplicationController
     before_action :logged_in_user, only: [:create]
     
