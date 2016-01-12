@@ -90,6 +90,10 @@ input, textarea, select, .uneditable-input {
   width: auto;
 }
 
+.bootstrap-date {
+  display: inline-block;
+  width: auto;
+}
 
 input {
   height: auto !important;
@@ -108,11 +112,6 @@ input {
   .form-control {
     color: $state-danger-text;
   }
-}
-
-.bootstrap-date {
-  display: inline-block;
-  width: 50%;
 }
 
 

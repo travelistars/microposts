@@ -32,10 +32,10 @@
                 <label class="col-sm-3 control-label" for="user_birthday">
                     <%= f.label :birthday %>:
                 </label>
-                <div class="col-sm-9">                    
+                <div class="col-sm-9 control-label" for="user_birthday">                    
                     <%= f.date_select :birthday,
-                    start_year: 1940, end_year: Time.now.year,
-                    use_month_numbers: true, :class => 'bootstrap-date' %>
+                    {start_year: 1940, end_year: Time.now.year,
+                    use_month_numbers: true}, {class: 'form-control bootstrap-date'} %>
                 </div>
             </div>
             <div class="form-group">
