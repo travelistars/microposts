@@ -1,0 +1,11 @@
+<li followed_id="followed-<%= followed.id %>">
+   
+    <span class="user"><%= link_to following_relationship.user.name, following_relationship.user %></span>
+    <span class="content"><%= following_relationship.content %></span>
+    <span class="timestamp">
+       
+        <% if current_user == following_relationship.user %>
+            <%= link_to "unfollow", following_relationship, method: :delete, data: { confirm: "You sure?" } %>
+        <% end %>
+    </span>
+</li>
