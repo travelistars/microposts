@@ -23,12 +23,12 @@
     <% if @users.any? %>
       <ul class="users follow">
         <% @users.each do |user| %>
-          <%= gravatar_for @user %>
-          <%= user.name %>
+        <li>
+          <%= gravatar_for user %>
           <%= link_to user.name, user %>
-          <span class="timestamp">
-              Posted <%= time_ago_in_words(user.micropost.created_at) %> ago.
-          </span>
+          <%= user.description %>
+          </li>
+
         <% end %>
       </ul>
     <% end %>
