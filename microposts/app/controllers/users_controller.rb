@@ -20,24 +20,23 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
-    
-    def following_users
-      @title = "Following"
-      @user = User.find(params[:id])
-      @users = @user.following_users.paginate(page: params[:page])
-      render 'show_follow'
-    end
-    
-    def follower_users
-      @title = "Followers"
-      @user  = User.find(params[:id])
-      @users = @user.follower_users.paginate(page: params[:page])
-      render 'show_follow'
-    end
-    
-end
+  end
+  
+  def following_users
+    @title = "Following"
+    @user = User.find(params[:id])
+    @users = @user.following_users #.paginate(page: params[:page])
+    # render 'show_follow'
+  end
+  
+  def follower_users
+    @title = "Followers"
+    @user  = User.find(params[:id])
+    @users = @user.follower_users #.paginate(page: params[:page])
+    # render 'show_follow'
+  end
 
-private
+  private
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
