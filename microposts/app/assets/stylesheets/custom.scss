@@ -86,6 +86,10 @@ input, textarea, select, .uneditable-input {
   margin-bottom: 15px;
   @include box_sizing;
 }
+#user_birthday_wrap select{
+  width: auto;
+}
+
 
 input {
   height: auto !important;
