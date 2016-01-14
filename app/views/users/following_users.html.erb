@@ -7,11 +7,12 @@
       <span><b>Microposts:</b> <%= @user.microposts.count %></span>
     </section>
     <section class="stats">
-     <%= render 'shared/stats' %>
-     <% if @users.any? %>
-       <!--　小さいアイコンがあったとこ　-->
+      <%= render 'shared/stats' %>
+      <% if @users.any? %>
+        <div class="user_avatars">
+         <!-- アバターがいた場所 -->
+        </div>
       <% end %>
-
     </section>
   </aside>
   <div class="col-md-8">
@@ -20,7 +21,7 @@
       <ul class="users follow">
         <% @users.each do |user| %>
         <li>
-          <%= link_to gravatar_for(user), user %>
+          <%= gravatar_for user %>
           
           <%= link_to user.name, user %>
           <%= user.description %>
