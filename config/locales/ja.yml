@@ -1,9 +1,18 @@
 ja:
   activerecord:
     models:
-      users: ユーザー
+      user: ユーザー
     attributes:
-      users:
+      user:
         name: 名前
         email: メールアドレス
         password: パスワード
+        nickname: ニックネーム
+    errors:
+      models:
+        user:
+          invalid: "の書式が正しくありません"
+        
+          
+            
+        
