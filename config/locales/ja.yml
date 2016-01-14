@@ -11,3 +11,11 @@ ja:
         content: 内容
         description: 自己紹介
         gender: 性別
+    errors:
+      models:
+        user:
+          invalid: "の書式が正しくありません"
+        
+          
+            
+        
