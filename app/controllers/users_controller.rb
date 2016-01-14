@@ -2,13 +2,14 @@ I18n.locale = "ja"
 class UsersController < ApplicationController
   before_action :logged_in_user, only:[:index, :edit, :update, :destroy,
                                         :following_users, :follower_users]
+  before_action :set_user, only:[:show, :edit, :update, :destroy, :following_users, :follower_users]
   before_action :correct_user, only:[:edit, :update]
   def index
     @users = User.all
   end
   
   def show
-    @user = User.find(params[:id])
+    
     #@microposts = @user.microposts.order(created_at: :desc)
   end
   
@@ -39,13 +40,13 @@ class UsersController < ApplicationController
   end
   
   def following_users
-    @user = User.find(params[:id])
+  
     @users = @user.following_users #.paginate(page: params[:page])
     # render 'show_follow'
   end
   
   def follower_users
-    @user  = User.find(params[:id])
+    
     @users = @user.follower_users #.paginate(page: params[:page])
     # render 'show_follow'
   end
@@ -54,6 +55,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :nickname, :gender, :birthday, :description)
+  end
+  
+  def set_user
+    @user = User.find(params[:id])
   end
   
     def logged_in_user
