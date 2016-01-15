@@ -11,6 +11,8 @@ ja:
         content: 内容
         description: 自己紹介
         gender: 性別
+      micropost:
+        content: 内容
     errors:
       models:
         user:
