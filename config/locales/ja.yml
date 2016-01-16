@@ -16,7 +16,7 @@ ja:
     errors:
       models:
         user:
-          invalid: "の書式が正しくありません"
+          invalid: "の書式が正しくありません。"
         
           
             
